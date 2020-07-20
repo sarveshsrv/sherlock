@@ -57,6 +57,7 @@ class MyHomePage extends StatelessWidget {
                       margin: EdgeInsets.symmetric(
                         vertical: 9,
                         horizontal: 15,
+                        
                       ),
                       decoration: BoxDecoration(
                         border: Border.all(
