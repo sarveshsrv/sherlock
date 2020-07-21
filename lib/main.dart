@@ -30,7 +30,10 @@ class MyHomePage extends StatelessWidget {
       date: DateTime.now(),
     ),
   ];
-
+  // String titleInput;
+  //String amountInput;
+  final titleController = TextEditingController();
+  final amountController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,15 +57,43 @@ class MyHomePage extends StatelessWidget {
             color: Colors.blue[50],
             elevation: 5,
             child: Container(
-              margin: EdgeInsets.all(10),
+              margin: EdgeInsets.all(5),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
                   TextField(
-                    decoration: InputDecoration(labelText: "Title"),
+                    decoration: InputDecoration(
+                      labelText: "Title",
+                      labelStyle: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    controller: titleController,
+                    onChanged: (val) {
+                   //   print(titleController.text);
+                      //  titleInput = val;
+                    },
                   ),
                   TextField(
-                    decoration: InputDecoration(labelText: 'Amount'),
+                    decoration: InputDecoration(
+                      labelText: 'Amount',
+                      labelStyle: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    controller: amountController,
+                   // onChanged: (val) {
+                     // titleInput=val;
+                    //},
+
+                    //  onChanged: (val) => amountInput = val,
                   ),
+                  FlatButton(
+                    child: Text("Add Transaction"),
+                    onPressed: () {
+                      print(titleController.text);
+                      print(amountController.text);
+                      //print(amountInput);
+                    },
+                    color: Colors.purple,
+                    textColor: Colors.white,
+                  )
                 ],
               ),
             ),
