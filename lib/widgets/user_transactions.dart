@@ -27,10 +27,10 @@ class _UserTransactionsState extends State<UserTransactions> {
 
   void _addNewTransaction(String txTitle, double txAmount) {
     final newTx = Transaction(
+      id: DateTime.now().toString(),
       title: txTitle,
       amount: txAmount,
       date: DateTime.now(),
-      id: DateTime.now().toString(),
     );
 
     setState(() {
