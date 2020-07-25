@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 
 import './new_transaction.dart';
 import './transaction_list.dart';
@@ -43,8 +43,9 @@ class _UserTransactionsState extends State<UserTransactions> {
     return Column(
       children: <Widget>[
         NewTransaction(_addNewTransaction),
-        TransactionList(_userTransactions),
+        TransactionList(_userTransactions,),
       ],
     );
   }
 }
+*/
