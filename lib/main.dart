@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
           fontFamily: 'Quicksand',
           textTheme: ThemeData.light().textTheme.copyWith(
                 //title: TextStyle(
-                  headline6: TextStyle(
+                headline6: TextStyle(
                   fontFamily: 'OpenSans',
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
     //   date: DateTime.now(),
     // ),
   ];
-  //bool _showChart = false;
+  bool _showChart = false;
 
   List<Transaction> get _recentTransactions {
     return _userTransactions.where((tx) {
@@ -168,15 +168,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     'Show Chart',
                     style: Theme.of(context).textTheme.headline6,
                   ),
-                  // Switch.adaptive(
-                  //   activeColor: Theme.of(context).accentColor,
-                  //   value: _showChart,
-                  //   onChanged: (val) {
-                  //     setState(() {
-                  //       _showChart = val;
-                  //     });
-                  //   },
-                  // ),
+                  Switch.adaptive(
+                    activeColor: Theme.of(context).accentColor,
+                    value: _showChart,
+                    onChanged: (val) {
+                      setState(() {
+                        _showChart = val;
+                      });
+                    },
+                  ),
                 ],
               ),
             if (!isLandscape)
