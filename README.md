@@ -1,4 +1,4 @@
-# WeatherZone
+# sherLOCK
 
 A Flutter project to check your daily expenses and prepare the data of the expenditure in a pictorial manner.
 
